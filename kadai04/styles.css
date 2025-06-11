@@ -10,3 +10,50 @@ header{
     text-align: center;
     padding: 20px 0;
 }
+product-section {
+  background-color: white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+product-section img {
+  width: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+product-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+product-section p {
+  margin-bottom: 20px;
+}
+
+
+buy-button {
+  display: inline-block;
+  background-color: #666; 
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #333; 
+}
+
+footer {
+  background-color: #eee; 
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
