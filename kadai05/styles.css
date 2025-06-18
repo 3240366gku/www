@@ -38,18 +38,18 @@ section img {
   height: auto;
   margin: 0 auto;
 }
-box1 {
+.box1 {
   background-color: #e6f7ff;
   border: 2px solid #333;
   border-radius: 10px;
 }
-box2 {
+.box2 {
   background-color: #fff2e6;
   border: 2px solid #333;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-box3 {
+.box3 {
   background-color: #f9e6ff;
   border: 2px dashed #333;
 }
