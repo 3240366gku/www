@@ -42,14 +42,7 @@ header nav a {
   margin-top: 30px;
 }
 
-.card {
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  text-align: center;
-}
+
 
 .card img {
   max-width: 100%;
