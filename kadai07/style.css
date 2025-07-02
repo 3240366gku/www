@@ -41,7 +41,6 @@ nav a {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* サービスカード */
 .card {
   background: #fff;
   margin-bottom: 20px;
@@ -56,7 +55,6 @@ nav a {
   border-radius: 8px;
 }
 
-/* フォーム */
 form {
   display: flex;
   flex-direction: column;
@@ -84,82 +82,6 @@ button:hover {
   background-color: #026;
 }
 
-/* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
-   
-
-了解しました。以下に**完全一致**でHTML（`index.html`）とCSS（`style.css`）のコードを記載します。画像は `img/service.jpg` に別の著作権フリーのものを使用してください。
-
----
-
-### ✅ `index.html`
-
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ひだまりソリューションズ</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <header>
-    <h1>ひだまりソリューションズ</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">会社概要</a></li>
-        <li><a href="#services">サービス</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about" class="section">
-      <h2>会社概要</h2>
-      <p>私たちは地域密着型のITソリューション企業として、クラウド導入やウェブ制作を通じた業務改善を支援しています。</p>
-    </section>
-
-    <section id="services" class="section">
-      <h2>サービス紹介</h2>
-
-      <div class="card">
-        <h3>Web制作</h3>
-        <img src="img/service.jpg" alt="Web制作の様子" />
-        <p>スマートフォン対応のモダンなWebサイトを制作します。</p>
-      </div>
-
-      <div class="card">
-        <h3>クラウド導入支援</h3>
-        <p>Google WorkspaceやMicrosoft 365などの導入をサポートします。</p>
-      </div>
-
-      <div class="card">
-        <h3>デジタル研修</h3>
-        <p>中小企業向けのITリテラシー研修も承っています。</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>お問い合わせ</h2>
-      <form>
-        <label>お名前
-          <input type="text" name="name" required />
-        </label>
-        <label>メールアドレス
-          <input type="email" name="email" required />
-        </label>
-        <label>メッセージ
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit">送信</button>
-      </form>
-    </section>
-  </main>
-
-</body>
-</html>
