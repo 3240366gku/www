@@ -75,8 +75,6 @@ button {
 button:hover {
   background-color: #007799;
 }
-
-/* レスポンシブ対応 */
 @media screen and (max-width: 600px) {
   nav a {
     display: block;
