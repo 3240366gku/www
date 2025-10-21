@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>配列の利用</title>
-    
+<style>
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f8cda1;
+}
+td button {
+  padding: 5px 10px;
+}
+</style>
 </head>
 <body>
-    
+<h2>利用料の計算</h2>
+
+<table>
+  <tr>
+    <th>No.</th>
+    <th>料金(a)</th>
+    <th>人数(b)</th>
+    <th>a×b</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>500</td>
+    <td>10</td>
+    <td><button onclick="multiply_0()">利用料の合計</button></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>980</td>
+    <td>16</td>
+    <td><button onclick="multiply_1()">利用料の合計</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1200</td>
+    <td>8</td>
+    <td><button onclick="multiply_2()">利用料の合計</button></td>
+  </tr>
+</table>
+
+<script>
+let a = [500, 980, 1200];
+let b = [10, 16, 8];
+let answer;
+
+function multiply_0() {
+  answer = a[0] * b[0];
+  alert("料金は" + answer + "円です");
+}
+
+function multiply_1() {
+  answer = a[1] * b[1];
+  alert("料金は" + answer + "円です");
+}
+
+function multiply_2() {
+  answer = a[2] * b[2];
+  alert("料金は" + answer + "円です");
+}
+</script>
+
 </body>
 </html>
