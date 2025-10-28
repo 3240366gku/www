@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>座席の予約</title>
+<style>
+  body { font-family: "メイリオ", sans-serif; }
+  .red { color: red; }
+</style>
+</head>
+<body>
+
+<h1>座席の予約</h1>
+<p>東京会場 <span id="status" class="red">（予約受付中）</span></p>
+<button id="reserveBtn">予約する</button>
+<p id="message"></p>
+
+<script>
+  const status = document.getElementById("status");
+  const button = document.getElementById("reserveBtn");
+  const message = document.getElementById("message");
+
+  button.addEventListener("click", function() {
+    status.textContent = "（予約済み）";
+    button.style.display = "none";
+    message.textContent = "ありがとうございました。";
+  });
+</script>
+
+</body>
+</html>
