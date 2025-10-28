@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>座席の予約</title>
-<style>
-  body { font-family: "メイリオ", sans-serif; }
-  .red { color: red; }
-</style>
+  <meta charset="UTF-8">
+  <title>利用料の計算</title>
+  <style>
+    table, td, th { border: 1px solid #000; border-collapse: collapse; padding: 5px; }
+    th { background-color: #f9b; }
+  </style>
 </head>
 <body>
+  <h2>利用料の計算</h2>
 
-<h1>座席の予約</h1>
-<p>東京会場 <span id="status" class="red">（予約受付中）</span></p>
-<button id="reserveBtn">予約する</button>
-<p id="message"></p>
+  <table>
+    <tr><th>No.</th><th>料金(a)</th><th>人数(b)</th><th>a×b</th></tr>
+    <tr>
+      <td>0</td><td>500</td><td>10</td>
+      <td><button onclick="multiply(0)">利用料の合計</button></td>
+    </tr>
+    <tr>
+      <td>1</td><td>980</td><td>16</td>
+      <td><button onclick="multiply(1)">利用料の合計</button></td>
+    </tr>
+    <tr>
+      <td>2</td><td>1200</td><td>8</td>
+      <td><button onclick="multiply(2)">利用料の合計</button></td>
+    </tr>
+  </table>
 
-<script>
-  const status = document.getElementById("status");
-  const button = document.getElementById("reserveBtn");
-  const message = document.getElementById("message");
+  <script>
+    const a = [500, 980, 1200];
+    const b = [10, 16, 8];
 
-  button.addEventListener("click", function() {
-    status.textContent = "（予約済み）";
-    button.style.display = "none";
-    message.textContent = "ありがとうございました。";
-  });
-</script>
-
+    function multiply(index) {
+      const answer = a[index] * b[index];
+      alert("料金は " + answer + "円です");
+    }
+  </script>
 </body>
 </html>
