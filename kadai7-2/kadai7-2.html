@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>写真の一覧</title>
+
+<style>
+  #photos img {
+    width: 200px;
+    margin: 5px;
+  }
+</style>
+
+</head>
+<body>
+
+<h1>写真の一覧</h1>
+
+<button id="showBtn">写真を表示</button>
+
+<div id="photos"></div>
+
+<script>
+  const btn = document.getElementById("showBtn");
+  const photosDiv = document.getElementById("photos");
+
+  btn.addEventListener("click", function() {
+
+    const photos = [
+      "photo_1.jpg",
+      "photo_2.jpg",
+      "photo_3.jpg",
+      "photo_4.jpg",
+      "photo_5.jpg",
+      "photo_6.jpg",
+      "photo_7.jpg",
+      "photo_8.jpg"
+    ];
+
+    photos.forEach(function(src) {
+      let img = document.createElement("img");
+      img.src = src;
+      photosDiv.appendChild(img);
+    });
+
+    btn.remove();
+  });
+</script>
+
+</body>
+</html>
