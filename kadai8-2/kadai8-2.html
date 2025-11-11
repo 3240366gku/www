@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>映画館チケット料金</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #add8e6;
+    }
+    .rowTitle {
+      background: #ffe4b5;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>映画館チケット料金</h1>
+<div id="view"></div>
+
+<script>
+  const ticket = {
+    "平日": {
+      "大人": 1800,
+      "大学生": 1500,
+      "高校生": 1200,
+      "子ども": 1000
+    },
+    "休日": {
+      "大人": 2000,
+      "大学生": 1700,
+      "高校生": 1300,
+      "子ども": 1100
+    }
+  };
+
+  function showTable() {
+    let html = "<table>";
+    
+    html += "<tr><th>区分</th>";
+    for (let day in ticket) {
+      html += `<th>${day}</th>`;
+    }
+    html += "</tr>";
+
+    const groupList = Object.keys(ticket["平日"]);
+    groupList.forEach(group => {
+      html += `<tr><td class="rowTitle">${group}</td>`;
+      for (let day in ticket) {
+        html += `<td>${ticket[day][group]}円</td>`;
+      }
+      html += "</tr>";
+    });
+
+    html += "</table>";
+
+    document.getElementById("view").innerHTML = html;
+  }
+
+  showTable();
+</script>
+
+</body>
+</html>
