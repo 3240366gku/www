@@ -27,35 +27,30 @@
     document.getElementById("count").textContent = count;
     let result = "";
 
-    // --- 1回目：★1個
     if (count === 1) {
       for (let i = 0; i < 1; i++) {
         result += "★";
       }
     }
 
-    // --- 2回目：★5個
     else if (count === 2) {
       for (let i = 0; i < 5; i++) {
         result += "★";
       }
     }
 
-    // --- 3回目：1～5を表示
     else if (count === 3) {
       for (let i = 1; i <= 5; i++) {
         result += i + " ";
       }
     }
 
-    // --- 4回目：偶数のみ（2,4,6,8,10）
     else if (count === 4) {
       for (let i = 2; i <= 10; i += 2) {
         result += i + " ";
       }
     }
 
-    // --- 5回目：1〜5の合計
     else if (count === 5) {
       let sum = 0;
       for (let i = 1; i <= 5; i++) {
@@ -64,7 +59,6 @@
       result = "合計値：" + sum;
     }
 
-    // --- 6回目以降：リセット
     else {
       result = "クリアしました。カウントを0に戻します。";
       count = 0;
@@ -77,3 +71,4 @@
 
 </body>
 </html>
+
