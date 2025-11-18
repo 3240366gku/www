@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Click Counter</title>
+<style>
+  body { font-family: Arial; text-align: center; padding: 40px; }
+  #result { margin-top: 20px; padding: 15px; background: #f2f2f2; border-radius: 10px; }
+  button { padding: 10px 30px; font-size: 18px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h2>Click Counter ★ switch + for構文</h2>
+
+<p>クリック回数：<span id="count">0</span> 回</p>
+
+<button id="btn">クリック</button>
+
+<div id="result">ここに結果が表示されます</div>
+
+<script>
+  let count = 0;
+
+  document.getElementById("btn").addEventListener("click", function() {
+    count++;
+    let result = "";
+
+    switch (count) {
+
+      // --- 1回目：★1個
+      case 1:
+        for (let i = 0; i < 1; i++) {
+          result += "★";
+        }
+        break;
+
+      // --- 2回目：★5個
+      case 2:
+        for (let i = 0; i < 5; i++) {
+          result += "★";
+        }
+        break;
+
+      // --- 3回目：1～5の数字
+      case 3:
+        for (let i = 1; i <= 5; i++) {
+          result += i + " ";
+        }
+        break;
+
+      // --- 4回目：偶数（2,4,6,8,10）
+      case 4:
+        for (let i = 2; i <= 10; i += 2) {
+          result += i + " ";
+        }
+        break;
+
+      // --- 5回目：1〜5の合計
+      case 5:
+        let sum = 0;
+        for (let i = 1; i <= 5; i++) {
+          sum += i;
+        }
+        result = "合計値：" + sum;
+        break;
+
+      // --- 6回目以降：リセット
+      default:
+        result = "クリアしました。カウントを0に戻します。";
+        count = 0;
+        break;
+    }
+
+    document.getElementById("count").textContent = count;
+    document.getElementById("result").textContent = result;
+  });
+</script>
+
+</body>
+</html>
