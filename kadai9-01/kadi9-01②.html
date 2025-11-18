@@ -28,35 +28,30 @@
 
     switch (count) {
 
-      // --- 1回目：★1個
       case 1:
         for (let i = 0; i < 1; i++) {
           result += "★";
         }
         break;
 
-      // --- 2回目：★5個
       case 2:
         for (let i = 0; i < 5; i++) {
           result += "★";
         }
         break;
 
-      // --- 3回目：1～5の数字
       case 3:
         for (let i = 1; i <= 5; i++) {
           result += i + " ";
         }
         break;
 
-      // --- 4回目：偶数（2,4,6,8,10）
       case 4:
         for (let i = 2; i <= 10; i += 2) {
           result += i + " ";
         }
         break;
 
-      // --- 5回目：1〜5の合計
       case 5:
         let sum = 0;
         for (let i = 1; i <= 5; i++) {
@@ -65,7 +60,6 @@
         result = "合計値：" + sum;
         break;
 
-      // --- 6回目以降：リセット
       default:
         result = "クリアしました。カウントを0に戻します。";
         count = 0;
@@ -79,3 +73,4 @@
 
 </body>
 </html>
+
