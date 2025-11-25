@@ -31,7 +31,9 @@
 <script>
 function check(x) {
 
-  if (x == 2 || x == 4) {
+  if (x == 2) {
+    document.getElementById('message').textContent = '正解！';
+  } else if (x == 4) {
     document.getElementById('message').textContent = '正解！';
   } else {
     document.getElementById('message').textContent = '間違い！';
@@ -43,4 +45,3 @@ function check(x) {
 </body>
 
 </html>
-
