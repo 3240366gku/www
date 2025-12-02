@@ -23,17 +23,17 @@
 
 <script>
 function show() {
-  let anser = [];   // 解を保存する配列
-  let count = 0;    // 見つけた解の数
+  let anser = [];
+  let count = 0;
 
-  for (let x = 1; x <= 100; x++) {  // xを1,2,3,...と変化
+  for (let x = 1; x <= 100; x++) {
     let y = x*x*x - 53*x*x + 620*x - 1036;
 
     if (y === 0) {
-      anser[count] = x;  // 解を保存
-      count++;          // 個数カウント
+      anser[count] = x;
+      count++;
 
-      if (count === 3) { // 3つ見つけたら強制終了
+      if (count === 3) {
         break;
       }
     }
@@ -46,3 +46,4 @@ function show() {
 
 </body>
 </html>
+
