@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>関数の戻り値</title>
+
+<!-- 参考文献：『30時間でマスター Webデザイン 改訂版』教出版，2019年10月18日，ISBN978-4407347814 -->
+<!-- Webの基本構造・CSSの書き方を同書を参考に記述 -->
+
 <style>
    .big_font {
     font-size: 30px;
    }
    #result {
-    background-color: #ffcc99;
-    width: 300px;
-    height: 60px;
-    padding: 10px;
-    margin-top: 15px;
-}
-</style>  
+     background-color: #ffcc99;
+     width: 300px;
+     height: 60px;
+     padding: 10px;
+     margin-top: 15px;
+   }
+</style>
 </head>
 <body>
 <h3>1～10で割り切れる数字</h3>
@@ -22,26 +26,31 @@
 
 <button onclick="show()">結果を見る</button>
 
-<div id="result">ここに結果が表示されます。</div>    
+<div id="result">ここに結果が表示されます。</div>
 
 <script>
-    function calc() {
-        let num = 1;
-        while (true) {
-            let allOK = true;
-            for (let i = 1; i <= 10; i++){
-                if (nam % i  !==0 ) {
-                    allOK = false;
-                }
-            }
-            if (allOK) return num;
-            num++;
-        }
+/* 『30時間でマスター Webデザイン 改訂版』を参考に
+   JavaScriptの関数・戻り値の学習内容を元に作成 */
+
+function calc() {
+  let num = 1;
+  while (true) {
+    let allOK = true;
+    for (let i = 1; i <= 10; i++) {
+      if (num % i !== 0) {
+        allOK = false;
+        break;
+      }
     }
-    function show() {
-        const answer = calc();
-        document.getElementById("result").innerText = "答えは" + anser + "です。";
-    }
+    if (allOK) return num;
+    num++;
+  }
+}
+
+function show() {
+  const answer = calc();
+  document.getElementById("result").innerText = "答えは" + answer + "です。";
+}
 </script>
 
 </body>
