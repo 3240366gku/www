@@ -34,7 +34,6 @@ function calc() {
   n = Number(n);
   m = Number(m);
 
-  // 入力チェック
   if (isNaN(n) || isNaN(m) || n < 1 || m > 10 || n > m) {
     alert("正しい数値を入力してください");
     return;
@@ -42,7 +41,6 @@ function calc() {
 
   let num = 1;
 
-  // n〜mすべてで割り切れる最小値を探す
   while (true) {
     let ok = true;
 
@@ -66,3 +64,4 @@ function calc() {
 
 </body>
 </html>
+
