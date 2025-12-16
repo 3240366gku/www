@@ -19,14 +19,12 @@
 <script>
 function calc() {
 
-  // 数値の入力
   var n = prompt("範囲の最小値を1〜10で入力してください");
   var m = prompt("範囲の最大値を1〜10で入力してください");
 
   n = Number(n);
   m = Number(m);
 
-  // 入力チェック（教科書で出てくる if 文）
   if (isNaN(n) || isNaN(m) || n < 1 || m > 10 || n > m) {
     alert("正しい数値を入力してください");
     return;
@@ -34,12 +32,10 @@ function calc() {
 
   var num = 1;
 
-  // while文（教科書の繰り返し処理）
   while (true) {
 
     var flg = true;
 
-    // for文（範囲のチェック）
     for (var i = n; i <= m; i++) {
       if (num % i != 0) {
         flg = false;
@@ -47,7 +43,6 @@ function calc() {
       }
     }
 
-    // 全てで割り切れたら表示
     if (flg == true) {
       document.getElementById("result").innerHTML =
         n + "〜" + m + "で割り切れる最小の数値は" + num + "です。";
@@ -61,3 +56,4 @@ function calc() {
 
 </body>
 </html>
+
