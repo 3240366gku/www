@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>breakの活用</title>
-
-<style>
-  .big_font {
-    font-size: 24px;
-  }
-  #photo {
-    display: none;
-    width: 250px;
-  }
-</style>
-
+  <meta charset="UTF-8">
+  <title>推しちいかわ図鑑</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h3>問題</h3>
-<p>次の方程式を満たす解をJavaScriptで求めます。</p>
+<header>
+  <h1>推しちいかわ図鑑</h1>
+  <nav>
+    <a href="index.html">図鑑</a>
+    <a href="quiz.html">クイズ</a>
+  </nav>
+</header>
 
-<p class="big_font">x<sup>3</sup> - 53x<sup>2</sup> + 1036 = 0</p>
+<main>
+  <section class="card-list">
 
-<p>※解は3個あり、すべて1以上の整数です。</p>
+    <article class="card">
+      <img src="img/ちいかわ.jpg" alt="ちいかわ">
+      <h2>ちいかわ</h2>
+      <p>
+        小さくて臆病だけど、優しくて一生懸命がんばるキャラ。
+        怖いことや不安なことがあっても、少しずつ前に進もうとする姿がとても応援したくなる。
+        時々ご褒美をもらえるとすごく嬉しそうで、そこがまた愛おしいポイント。
+      </p>
+      <ul>
+        <li>感情豊か</li>
+        <li>がんばり屋</li>
+        <li>癒される存在</li>
+      </ul>
+    </article>
 
-<button onclick="show()">結果を見る</button>
+    <article class="card">
+      <img src="img/ハチワレ.jpeg" alt="ハチワレ">
+      <h2>ハチワレ</h2>
+      <p>
+        明るくてポジティブな性格で「なんとかなるよ！」が口癖。
+        つらいことがあっても前向きな言葉で周りを励ますムードメーカー。
+        知識が豊富でしっかり者な一面もあり、ちいかわを支える存在になっている。
+      </p>
+    </article>
 
-<div id="message" class="big_font"></div>
+    <article class="card">
+      <img src="img/うさぎ.jpg" alt="うさぎ">
+      <h2>うさぎ</h2>
+      <p>
+        超ハイテンションで自由奔放。突然叫んだり踊ったり、
+        何を考えているかわからないところが面白い。
+        でも実は仲間思いで、いざという時はちゃんと助けてくれるギャップが魅力。
+      </p>
+    </article>
 
-<img id="photo" src="img/集合.png">
+    <article class="card">
+      <img src="img/モモンガ.jpg" alt="モモンガ">
+      <h2>モモンガ</h2>
+      <p>
+        かわいいアピールが得意で、褒められるとすごく嬉しそうにするわがまま系。
+        大きな目と表情がクセになる。甘えん坊なところも人気の理由。
+      </p>
+    </article>
 
-<script>
-function show() {
+    <article class="card">
+      <img src="img/ラッコ師匠.jpg" alt="ラッコ師匠">
+      <h2>ラッコ師匠</h2>
+      <p>
+        強くて頼れる存在。戦いがとても上手く、みんなの憧れのキャラ。
+        時々スパルタだけど、的確なアドバイスでちいかわたちを成長させる。
+      </p>
+    </article>
 
-  let anser = [];
-  let count = 0;
+  </section>
 
-  let x = 1;
+  <p class="link">
+    公式サイトはこちら → 
+    <a href="https://chiikawa-info.jp/" target="_blank">https://chiikawa-info.jp/</a>
+  </p>
 
-  while (true) {
+</main>
 
-    if ((x * x * x) - (53 * x * x) + 1036 === 0) {
-      anser[count] = x;
-      count++;
-    }
-
-    if (count === 3) {
-      break;
-    }
-
-    x++;
-  }
-
-  document.getElementById("message").innerHTML =
-    "解は " + anser[0] + "、" + anser[1] + "、" + anser[2] + " です。";
-
-  document.getElementById("photo").style.display = "block";
-
-}
-</script>
+<footer>
+  © 2025 Chiikawa Fan Page
+</footer>
 
 </body>
 </html>
-
