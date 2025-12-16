@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #fafafa;
+}
+
+header {
+  background: #ffd8ef;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #444;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  width: 260px;
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 0 6px #ccc;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #ff99c8;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.link {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* スマホ用 */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
