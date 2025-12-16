@@ -1,4 +1,3 @@
-// クイズデータ
 const quiz = [
   {
     img: "img/うさぎ.jpg",
@@ -35,7 +34,6 @@ const quiz = [
 let now = 0;
 let score = 0;
 
-// HTMLパーツ
 let qEl = document.querySelector("#question");
 let imgEl = document.querySelector("#quiz-img");
 let chEl = document.querySelector("#choices");
@@ -43,13 +41,12 @@ let msgEl = document.querySelector("#result");
 let nextBtn = document.querySelector("#next-btn");
 let restartBtn = document.querySelector("#restart-btn");
 
-// 問題表示
 function showQuiz() {
-  console.log("問題番号:", now); //←学生ぽい
+  console.log("問題番号:", now);
   let q = quiz[now];
   qEl.textContent = q.q;
   imgEl.src = q.img;
-  chEl.innerHTML = ""; //リセット
+  chEl.innerHTML = "";
 
   q.c.forEach(function (item, i) {
     let b = document.createElement("button");
@@ -75,7 +72,6 @@ function check(choice) {
   nextBtn.style.display = "block";
 }
 
-// 次へ
 nextBtn.addEventListener("click", function () {
   now++;
   if (now < quiz.length) {
@@ -85,7 +81,6 @@ nextBtn.addEventListener("click", function () {
   }
 });
 
-// 結果
 function finish() {
   qEl.textContent = score + "問正解でした！";
   imgEl.style.display = "none";
@@ -93,15 +88,14 @@ function finish() {
   nextBtn.style.display = "none";
 
   if (score >= 4) {
-    msgEl.textContent = "推し愛すごい！";
+    msgEl.textContent = "愛がすごい！";
   } else {
-    msgEl.textContent = "推しをもっと知ってあげよう！";
+    msgEl.textContent = "ちいかわ達をもっと知ろう！";
   }
 
   restartBtn.style.display = "block";
 }
 
-// やり直し
 restartBtn.addEventListener("click", function () {
   now = 0;
   score = 0;
@@ -110,5 +104,5 @@ restartBtn.addEventListener("click", function () {
   showQuiz();
 });
 
-// 最初の問題
 showQuiz();
+
