@@ -52,10 +52,3 @@ ul {
   text-align: center;
   margin-bottom: 25px;
 }
-
-/* スマホ用 */
-@media (max-width: 600px) {
-  .card {
-    width: 90%;
-  }
-}
