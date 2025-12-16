@@ -42,7 +42,9 @@ main {
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
@@ -51,4 +53,5 @@ main {
   }
 
 }
+
 
