@@ -3,56 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <title>数値の入力とエラー処理</title>
-<style>
-  body {
-    font-family: sans-serif;
-  }
-  .result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f8cfa3;
-  }
-</style>
 </head>
 <body>
 
 <h1>n〜mで割り切れる数字</h1>
-<p>1〜10の好きな範囲で<br>
-割り切れる最小の数値をJavaScriptで求めます。</p>
+<p>
+1〜10の好きな範囲で<br>
+割り切れる最小の数値をJavaScriptで求めます。
+</p>
 
-<button onclick="calc()">範囲を指定</button>
+<input type="button" value="範囲を指定" onclick="calc();">
 
-<div id="result" class="result">
-  ここに結果が表示されます。
-</div>
+<p id="result">ここに結果が表示されます。</p>
 
 <script>
 function calc() {
-  let n = prompt("範囲の最小値を1〜10で入力してください");
-  let m = prompt("範囲の最大値を1〜10で入力してください");
+
+  // 数値の入力
+  var n = prompt("範囲の最小値を1〜10で入力してください");
+  var m = prompt("範囲の最大値を1〜10で入力してください");
 
   n = Number(n);
   m = Number(m);
 
+  // 入力チェック（教科書で出てくる if 文）
   if (isNaN(n) || isNaN(m) || n < 1 || m > 10 || n > m) {
     alert("正しい数値を入力してください");
     return;
   }
 
-  let num = 1;
+  var num = 1;
 
+  // while文（教科書の繰り返し処理）
   while (true) {
-    let ok = true;
 
-    for (let i = n; i <= m; i++) {
-      if (num % i !== 0) {
-        ok = false;
+    var flg = true;
+
+    // for文（範囲のチェック）
+    for (var i = n; i <= m; i++) {
+      if (num % i != 0) {
+        flg = false;
         break;
       }
     }
 
-    if (ok) {
-      document.getElementById("result").textContent =
+    // 全てで割り切れたら表示
+    if (flg == true) {
+      document.getElementById("result").innerHTML =
         n + "〜" + m + "で割り切れる最小の数値は" + num + "です。";
       break;
     }
@@ -64,4 +61,3 @@ function calc() {
 
 </body>
 </html>
-
