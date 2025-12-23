@@ -49,6 +49,38 @@ ul {
 }
 
 
+.quiz-area {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.quiz-area img {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+#choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#choices button {
+  padding: 8px 14px;
+  border: 1px solid #aaa;
+  background: #fff;
+  cursor: pointer;
+}
+
+#next-btn,
+#restart-btn {
+  margin-top: 15px;
+}
+
 
 
 
